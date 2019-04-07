@@ -478,8 +478,11 @@ $(document).ready(function(){
         }
 
         div.tv-remote-button:hover{
-            /* Auf die hab ich vergessen :( */
-            background-image:url('/media/tv/remote-button-hover.png?noinline');
+            /**
+             * Auf die hab ich vergessen :(
+             * Ist leider nicht das Original sondern nur ein semi-transparentes schwarzes Bild...
+             */ 
+            background-image:url('https://raw.githubusercontent.com/pr0-dev/pr0-tv/master/media/remote-hover.png');
         }
 
         div.tv-remote-button-1{
