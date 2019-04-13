@@ -1,15 +1,12 @@
 // ==UserScript==
 // @name        Pr0-TV
 // @author      TheShad0w
-// @include     http://*pr0gramm.com*
 // @include     https://*pr0gramm.com*
-// @exclude     http://full.pr0gramm.com*
 // @exclude     https://full.pr0gramm.com*
-// @exclude     http://pr0gramm.com/static/
 // @exclude     https://pr0gramm.com/static/
 // @version     1.0.0
 // @description Fügt den Pr0 TV wieder hinzu
-// @icon        http://pr0gramm.com/media/pr0gramm-favicon.png
+// @icon        https://pr0gramm.com/media/pr0gramm-favicon.png
 // @grant       unsafeWindow
 // @run-at      document-end
 // ==/UserScript==
