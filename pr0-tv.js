@@ -34,6 +34,7 @@ function init(){
                   ' <div class="tv-remote-button tv-remote-button-6" data-num="6" data-channel="porn"></div>' +
                   ' <div class="tv-remote-button tv-remote-button-7" data-num="7" data-channel="top"></div>' +
                   ' <div class="tv-remote-button tv-remote-button-8" data-num="8" data-channel="sport"></div>' +
+                  ' <div class="tv-remote-button tv-remote-button-9" data-num="9" data-channel="home"></div>' +
                   ' <div class="tv-remote-button tv-remote-button-mute" data-channel="mute"></div> </div> </div> ',
         title: "Pr0 TV",
         images: {},
@@ -144,6 +145,8 @@ function init(){
 
         clickChannel: function(ev){
             var button = $(ev.currentTarget).data("channel");
+
+            if (button === "home") window.location = "/";
 
             if (button === "mute"){
                 this.muted = !this.muted;
@@ -444,6 +447,7 @@ $(document).ready(function(){
     keys["54"] = keys["102"] = 6;
     keys["55"] = keys["103"] = 7;
     keys["56"] = keys["104"] = 8;
+    keys["57"] = keys["105"] = 9;
 
     $(document).keydown(function(e){
         if (keys[e.keyCode]) $('.tv-remote-button[data-num="' + keys[e.keyCode] + '"]').click();
@@ -597,6 +601,11 @@ $(document).ready(function(){
             top: 244px;
         }
 
+        div.tv-remote-button-9 {
+            left: 150px;
+            top: 244px;
+        }
+
         div.tv-remote-button-mute {
             left: 152px;
             top: 366px;
@@ -653,7 +662,7 @@ $(document).ready(function(){
         }
     </style>`);
 
-    $("#head-menu").append('<a class="user-only" id="pr0-tv-link" href="/pr0-tv" title="Pr0 TV">TV</a>');
+    $("#head-menu").append('<a class="user-only" id="pr0-tv-link" href="/pr0-tv" target="_blank" title="Pr0 TV">TV</a>');
 
     init();
 });
